@@ -1,0 +1,330 @@
+    body {
+        height: 100vh;
+        max-height: 100%;
+        min-height: 100%;
+        color: #070707
+    }
+    
+    a {
+        color: #f3a32c;
+        transition: .3s;
+    }
+    
+    a:hover {
+        color: #070707;
+        text-decoration: none;
+    }
+    
+    i {
+        color: #f3a32c;
+        transition: .3s;
+        cursor: pointer;
+    }
+    
+    html {
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    
+    i:hover {
+        color: rgb(206, 206, 206);
+        text-decoration: none;
+    }
+    
+    .form-control:focus {
+        border-color: rgb(243, 163, 43);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(243, 163, 43, 0.6);
+    }
+    
+    .right-column {
+        border-right: 1px solid #e9e9e9;
+    }
+    
+    .header {
+        border-bottom: 1px solid #e9e9e9;
+        height: 70px;
+    }
+    
+    .content {
+        height: -moz-calc(100% - 70px);
+        /* Firefox */
+        height: -webkit-calc(100% - 70px);
+        /* Chrome, Safari */
+        height: calc(100% - 70px);
+        /* IE9+ and future browsers */
+    }
+    
+    .note-list {
+        position: absolute;
+        overflow-y: scroll;
+    }
+    
+    .note-list a {
+        color: inherit
+    }
+    
+    .note-list a:hover {
+        text-decoration: none;
+    }
+    
+    .note-list .note-list-item {
+        border-bottom: 1px solid #e9e9e9;
+        padding: 10px;
+        transition: .3s;
+        cursor: pointer;
+    }
+    /*
+.note-list .note-list-item:hover {
+    background-color: #f3a32c96;
+    cursor: pointer;
+}*/
+    
+    .note-list .note-list-item .title {
+        font-weight: 400;
+        font-size: 120%;
+    }
+    
+    .note-detail {
+        max-width: 800px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    
+    .focus-mode {
+        text-align: left;
+        position: absolute;
+        font-size: 120%;
+    }
+    
+    .menu-left {
+        text-align: right;
+        font-size: 120%;
+    }
+    
+    .menu-left i {
+        margin-left: 10px
+    }
+    
+    .menu-delete {
+        right: 10px;
+        display: none;
+        font-size: 90%;
+    }
+    
+    .menu-delete span {
+        padding: 5px 10px;
+        margin: 10px;
+    }
+    
+    .delete-forever {
+        border: 2px solid red;
+        color: red;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: .3s;
+    }
+    
+    .delete-forever:hover {
+        background-color: rgb(255, 142, 142);
+        color: #fff;
+    }
+    
+    .restore-note {
+        border: 2px solid #f3a32c;
+        color: #f3a32c;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: .3s;
+    }
+    
+    .restore-note:hover {
+        background-color: #f3a32c8f !important;
+        color: #fff;
+    }
+    
+    .hide {
+        display: none !important;
+    }
+    
+    .tags-section {
+        position: absolute;
+        background-color: #444444f6;
+        width: 0px;
+        visibility: hidden;
+        height: 100%;
+        z-index: 999;
+        transition: .3s;
+    }
+    
+    .close-tags-section {
+        position: absolute;
+        right: 15px;
+        top: 5px;
+        cursor: pointer;
+    }
+    
+    .tags-menu {
+        padding-top: 25px;
+        padding-left: 25px;
+        color: #444;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #929292;
+    }
+    
+    .tag-notes {
+        padding: 10px;
+        color: #f3a32c;
+        transition: .3s;
+        cursor: pointer;
+    }
+    
+    .tag-notes:hover {
+        padding: 10px;
+        color: #000;
+        cursor: pointer;
+    }
+    
+    .tag-trash {
+        padding: 10px;
+        color: #f3a32c;
+        transition: .3s;
+        cursor: pointer;
+    }
+    
+    .tag-trash:hover {
+        padding: 10px;
+        color: #000;
+        cursor: pointer;
+    }
+    
+    .in-detail-tags {
+        position: fixed;
+        bottom: 0px;
+        padding: 10px;
+        background-color: inherit;
+        width: 100%;
+    }
+    
+    .single-tag {
+        background-color: rgb(133, 133, 133);
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+        margin: 5px;
+    }
+    
+    .add-tag {
+        margin: 5px;
+    }
+    
+    .ck-rounded-corners .ck.ck-editor__editable:not(.ck-editor__nested-editable),
+    .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-rounded-corners {
+        border: none
+    }
+    
+    .ck {
+        border: none !important;
+        box-shadow: none !important
+    }
+    
+    .ql-editor {
+        overflow: visible;
+    }
+    
+    #title {
+        border: none;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    
+    #title:focus {
+        border: none !important;
+        border-color: rgb(255, 255, 255);
+        box-shadow: none
+    }
+    
+    .ql-container {
+        font-size: 16px;
+    }
+    
+    .ql-snow .ql-editor pre.ql-syntax {
+        background-color: #23241f;
+        /* <== change this color */
+        color: #f8f8f2;
+        overflow: visible;
+    }
+    
+    .info-box {
+        position: absolute;
+        right: 5px;
+        top: 50px;
+        width: 250px;
+        text-align: right;
+        background: #fcfcfc;
+        padding: 10px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+        z-index: 999;
+        height: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+    
+    .info-box ul {
+        list-style: none;
+        transition: .5s;
+    }
+    
+    .info-box ul li {
+        padding-bottom: 15px;
+        transition: .5s;
+    }
+    
+    .info-box-p {
+        height: 0;
+        visibility: hidden;
+    }
+    
+    .tags-section {
+        position: absolute;
+        background-color: #444444f6;
+        width: 0px;
+        visibility: hidden;
+        height: 100%;
+        z-index: 999;
+        transition: .3s;
+    }
+    
+    .nav-tags {
+        color: #eee;
+        margin: 20px 0 0 20px;
+        position: relative;
+    }
+    
+    .nav-tags ul {
+        list-style: none;
+        padding-left: 20px;
+    }
+    
+    .nav-tags ul li {
+        margin-bottom: 10px;
+    }
+    
+    .nav-tags a {
+        color: inherit;
+    }
+    
+    .nav-tags a:hover {
+        color: #f3a32c;
+    }
+    
+     ::-webkit-scrollbar {
+        width: 0px;
+        /* Remove scrollbar space */
+        background: transparent;
+        /* Optional: just make scrollbar invisible */
+    }
+    /* Optional: show position indicator in red */
+    
+     ::-webkit-scrollbar-thumb {
+        background: #FF0000;
+    }
