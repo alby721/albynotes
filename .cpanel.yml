@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/yjqzjdib/repo/albynotes
+    - export DEPLOYPATH=/home/dafbeqhr/albynotes.albertoreineri.it/
     - /bin/cp -R * $DEPLOYPATH
